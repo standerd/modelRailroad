@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Dewald se Trein</title>
+</head>
+<body onload="loadContent()">
+    <div class="heading">
+        <input id="inputValue" class="load" type="text" placeholder="Add Command Here"></input>
+        <button class="pwrButton" onclick="sendCommand()">Send Command</button>
+        <div class="powerBtn">
+            <label class="switch2">
+                <input id="testToggle2" type="checkbox" onchange="mainPower(this)">
+                    <span class="slider2 round2"></span>     
+            </label>
+            <label>Main Track Power</label>    
+        </div>
+        <div class="powerBtn">
+        <label class="switch2">
+            <input id="testToggle2" type="checkbox" onchange="progPower(this)">
+                <span class="slider2 round2"></span>  
+        </label>
+        <label>Program Track Power</label>
+    </div>
+    </div>
+    
+    <div class="main">
+        <div class="control">
+            <canvas id="canvas" height="530" width="500"></canvas>
+            <div class="accessories">
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 1</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 2</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 3</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 4</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 5</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 6</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 7</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 8</label> 
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 9</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 10</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 11</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 12</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 13</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 14</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 15</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 16</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 17</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 18</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 19</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 20</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 21</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 22</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 23</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 24</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 25</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 26</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 27</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 28</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 29</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 30</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 31</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 32</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 33</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 34</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 35</label>
+                </div>
+                <div class="indivAcc">
+                    <label class="switch">
+                        <input id="testToggle" type="checkbox" onchange="setFunction(this)">
+                        <span class="slider round"></span>
+                      </label>
+                      <label>SW 36</label>
+                </div>
+            </div>
+        </div>
+        <div class="controlElements">
+
+        <div class="automation">
+            <button>Send All Locos</button>
+            <button>Stop All Locos</button>
+            <button>Send All Locos</button>
+            <button>Stop All Locos</button>
+            <button>Send All Locos</button>
+            <button>Stop All Locos</button>
+        </div>
+        <div class="controls">
+
+        
+        
+        <div class="loco">
+            <h3>Select Loco's to Shows</h3>
+            <select id="cars" name="cars" class="cars">
+                <option value="insidelocos">Inside Locos</option>
+                <option value="outsidelocos">Outside Locos</option>
+              </select>
+              <div class="iLoco">
+                
+              </div>
+              
+            
+            
+           
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+       
+        var socket = io();
+        </script>
+        <script src="/scripts.js"></script>
+</body>
+</html>
